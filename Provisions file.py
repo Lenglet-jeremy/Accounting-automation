@@ -36,14 +36,37 @@ def Reference_worksheet() :
     reference_ws.column_dimensions["AM"].width = 20/7
 
     reference_ws.column_dimensions["AN"].width = 120/7
-    reference_ws.column_dimensions["AO"].width = 80/7
-    reference_ws.column_dimensions["AP"].width = 80/7
-    reference_ws.column_dimensions["AQ"].width = 80/7
-    reference_ws.column_dimensions["AR"].width = 80/7
+    reference_ws.column_dimensions["AO"].width = 70/7
+    reference_ws.column_dimensions["AP"].width = 70/7
+    reference_ws.column_dimensions["AQ"].width = 70/7
+    reference_ws.column_dimensions["AR"].width = 70/7
+
+    reference_ws.column_dimensions["AS"].width = 80/7
     
     reference_ws.column_dimensions["AT"].width = 120/7
     reference_ws.column_dimensions["AU"].width = 120/7
+    
+    reference_ws.column_dimensions["AX"].width = 25/7
+    reference_ws.column_dimensions["AY"].width = 25/7
+    reference_ws.column_dimensions["AZ"].width = 25/7
+    
+    reference_ws.column_dimensions["BA"].width = 90/7
+    reference_ws.column_dimensions["BB"].width = 90/7
+    
+    reference_ws.column_dimensions["BC"].width = 25/7
+    reference_ws.column_dimensions["BD"].width = 25/7
+    reference_ws.column_dimensions["BE"].width = 25/7
+    
+    reference_ws.column_dimensions["BF"].width = 80/7
+    reference_ws.column_dimensions["BG"].width = 370/7
+    reference_ws.column_dimensions["BH"].width = 80/7
+    
+    reference_ws.column_dimensions["BI"].width = 25/7
+    reference_ws.column_dimensions["BJ"].width = 25/7
+    reference_ws.column_dimensions["BK"].width = 25/7
 
+    reference_ws.column_dimensions["BL"].width = 100/7
+    reference_ws.column_dimensions["BM"].width = 160/7
 
     #Formatting head of calendar
     reference_ws.merge_cells('C1:AL1')
@@ -300,8 +323,8 @@ def Reference_worksheet() :
     piece_type_list += "\"\'"
     category_piece_list += "\"\'"
 
-    print(piece_type_list)
-    print(category_piece_list)
+    #print(piece_type_list)
+    #print(category_piece_list)
 
 
     #paste piece_type_list to formula1 make bug Excel, found why
@@ -314,7 +337,140 @@ def Reference_worksheet() :
     reference_ws.add_data_validation(category_piece_data_validation)
     category_piece_data_validation.add("AO12:AO12")
 
+    reference_ws.merge_cells("BA1:BB1")
+    reference_ws["BA1"].value = "Sites"
+    reference_ws["BA1"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BA1"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BA1"].alignment = Alignment("center", "center")
+
+    reference_ws["BA2"].value = "Centre de cout"
+    reference_ws["BA2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BA2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BA2"].alignment = Alignment("center", "center")
+
+    reference_ws["BB2"].value = "Libelle"
+    reference_ws["BB2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BB2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BB2"].alignment = Alignment("center", "center")
+
+    Bottom_border_formating(Worksheet = reference_ws, Range = "BA1:BB1", Type_border = "dotted")  
+    Right_border_formating(Worksheet = reference_ws, Range = "BA2:BA2", Type_border = "hair")  
+    External_formatting(Worksheet = reference_ws, Range = "BA1:BB2", Type_border = "thin")
+
     
+    reference_ws["BA3"].value = "6200"
+    reference_ws["BA4"].value = "6201"
+    reference_ws["BA5"].value = "6202"
+    reference_ws["BA6"].value = "6203"
+    reference_ws["BA7"].value = "6204"
+    reference_ws["BA8"].value = "6205"
+    reference_ws["BA9"].value = "6206"
+    reference_ws["BA10"].value = "6207"
+    reference_ws["BA11"].value = "6208"
+    
+    reference_ws["BB3"].value = "Usine"
+    reference_ws["BB4"].value = "Montage"
+    reference_ws["BB5"].value = "Usinage"
+    reference_ws["BB6"].value = "Magasin"
+    reference_ws["BB7"].value = "Expedition"
+    reference_ws["BB8"].value = "Reception"
+    reference_ws["BB9"].value = "Restauration"
+    reference_ws["BB10"].value = "Propreté"
+    reference_ws["BB11"].value = "Logistique"
+
+
+    reference_ws.merge_cells("BF1:BH1")
+    reference_ws["BF1"].value = "Comptes comptable"
+    reference_ws["BF1"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BF1"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BF1"].alignment = Alignment("center", "center")
+    
+    reference_ws["BF2"].value = "Comptes"
+    reference_ws["BF2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BF2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BF2"].alignment = Alignment("center", "center")
+    
+    reference_ws["BG2"].value = "Libelle"
+    reference_ws["BG2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BG2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BG2"].alignment = Alignment("center", "center")
+    
+    reference_ws["BH2"].value = "Abreviation"
+    reference_ws["BH2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BH2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BH2"].alignment = Alignment("center", "center")
+
+    Internal_formating(Worksheet = reference_ws, Range = "BF1:BH2", Type_border = "hair")
+    External_formatting(Worksheet = reference_ws,  Range = "BF1:BH2", Type_border = "thin")
+    Bottom_border_formating(Worksheet = reference_ws,  Range = "BF1:BH1", Type_border = "dotted")
+
+    reference_ws["BF3"].value = "62110000"
+    reference_ws["BF4"].value = "64750000"
+    reference_ws["BF5"].value = "60610001"
+    reference_ws["BF6"].value = "60610002"
+    reference_ws["BF7"].value = "60610003"
+    reference_ws["BF8"].value = "61100000"
+    reference_ws["BF9"].value = "61520000"
+    reference_ws["BF10"].value = "62420000"
+
+    reference_ws["BG3"].value = "Personnel intérimaire"
+    reference_ws["BG4"].value = "Médecine du travail, pharmacie "
+    reference_ws["BG5"].value = "Fournitures non stockables (eau, énergie) - Eau"
+    reference_ws["BG6"].value = "Fournitures non stockables (eau, énergie) - Gaz"
+    reference_ws["BG7"].value = "Fournitures non stockables (eau, énergie) - Electricité"
+    reference_ws["BG8"].value = "Sous-traitance générale - Cantine"
+    reference_ws["BG9"].value = "Entretien et réparations sur biens immobiliers"
+    reference_ws["BG10"].value = "Transports sur ventes"
+
+    reference_ws["BH3"].value = "Interim"
+    reference_ws["BH4"].value = "Pole sante"
+    reference_ws["BH5"].value = "Eau"
+    reference_ws["BH6"].value = "Gaz"
+    reference_ws["BH7"].value = "Electricite"
+    reference_ws["BH8"].value = "Cantine"
+    reference_ws["BH9"].value = "Nettoyage"
+    reference_ws["BH10"].value = "Transport"
+
+
+    reference_ws.merge_cells("BL1:BM1")
+    reference_ws["BL1"].value = "Fournisseur"
+    reference_ws["BL1"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BL1"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BL1"].alignment = Alignment("center", "center")
+    
+    reference_ws["BL2"].value = "N° Fournisseur"
+    reference_ws["BL2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BL2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BL2"].alignment = Alignment("center", "center")
+    
+    reference_ws["BM2"].value = "Designation Fournisseur"
+    reference_ws["BM2"].fill = PatternFill(start_color = "000040", end_color = "000040", fill_type = "solid")
+    reference_ws["BM2"].font = Font(name = "Arial", sz = 8, color = "FFFFFF")
+    reference_ws["BM2"].alignment = Alignment("center", "center")
+
+    Internal_formating(Worksheet = reference_ws, Range = "BL1:BM2", Type_border = "hair")
+    External_formatting(Worksheet = reference_ws, Range = "BL1:BM2", Type_border = "thin")
+    Bottom_border_formating(Worksheet = reference_ws, Range = "BL1:BM1", Type_border = "dotted")
+
+    reference_ws["BL3"].value = "20001"
+    reference_ws["BL4"].value = "20002"
+    reference_ws["BL5"].value = "20003"
+    reference_ws["BL6"].value = "20004"
+    reference_ws["BL7"].value = "20005"
+    reference_ws["BL8"].value = "20006"
+    reference_ws["BL9"].value = "20007"
+    reference_ws["BL10"].value = "20008"
+
+    reference_ws["BL3"].value = "Agence interim 1"
+    reference_ws["BL4"].value = "Agence interim 2"
+    reference_ws["BL5"].value = "Medecine du travail"
+    reference_ws["BL6"].value = "Eau de ville"
+    reference_ws["BL7"].value = "EDF"
+    reference_ws["BL8"].value = "GDF"
+    reference_ws["BL9"].value = "Restaurateur"
+    reference_ws["BL10"].value = "Nettoyage"
+
+
     Provisions_file.save(PROVISIONS_FILE_PATH)
 
 
@@ -543,7 +699,6 @@ def Top_border_formating(Worksheet, Range, Type_border) :
 def Right_border_formating(Worksheet, Range, Type_border) :
     
     tab_range = range_to_numbers(Range)
-    print(tab_range)
 
 
     for col in range(tab_range[0], tab_range[2] + 1) : 
