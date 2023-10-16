@@ -461,14 +461,14 @@ def Reference_worksheet() :
     reference_ws["BL9"].value = "20007"
     reference_ws["BL10"].value = "20008"
 
-    reference_ws["BL3"].value = "Agence interim 1"
-    reference_ws["BL4"].value = "Agence interim 2"
-    reference_ws["BL5"].value = "Medecine du travail"
-    reference_ws["BL6"].value = "Eau de ville"
-    reference_ws["BL7"].value = "EDF"
-    reference_ws["BL8"].value = "GDF"
-    reference_ws["BL9"].value = "Restaurateur"
-    reference_ws["BL10"].value = "Nettoyage"
+    reference_ws["BM3"].value = "Agence interim 1"
+    reference_ws["BM4"].value = "Agence interim 2"
+    reference_ws["BM5"].value = "Medecine du travail"
+    reference_ws["BM6"].value = "Eau de ville"
+    reference_ws["BM7"].value = "EDF"
+    reference_ws["BM8"].value = "GDF"
+    reference_ws["BM9"].value = "Restaurateur"
+    reference_ws["BM10"].value = "Nettoyage"
 
 
     Provisions_file.save(PROVISIONS_FILE_PATH)
